@@ -6,11 +6,11 @@ export interface IUser {
   age: number;
 }
 
-export interface CounterState {
+export interface UserState {
   value: IUser[];
 }
 
-const initialState: CounterState = {
+const initialState: UserState = {
   value: [],
 };
 
@@ -18,7 +18,7 @@ export const userSlicer = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    addUser: (state, action: any) => {
+    addUser: (state, action: PayloadAction<IUser>) => {
       state.value.push(action.payload);
     },
   },
