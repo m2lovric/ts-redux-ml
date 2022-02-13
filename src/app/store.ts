@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from '../feature/counter/counterSlicer';
+import userReducer from '../feature/users/userSlicer';
 
-export const store = configureStore({ reducer: { counter: counterReducer } });
+export const store = configureStore({
+  reducer: { counter: counterReducer, users: userReducer },
+});
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

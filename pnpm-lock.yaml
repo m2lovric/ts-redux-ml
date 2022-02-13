@@ -4,11 +4,13 @@ specifiers:
   '@reduxjs/toolkit': ^1.7.2
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
+  '@types/uuid': ^8.3.4
   '@vitejs/plugin-react': ^1.0.7
   react: ^17.0.2
   react-dom: ^17.0.2
   react-redux: ^7.2.6
   typescript: ^4.5.4
+  uuid: ^8.3.2
   vite: ^2.8.0
 
 dependencies:
@@ -16,10 +18,12 @@ dependencies:
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-redux: 7.2.6_react-dom@17.0.2+react@17.0.2
+  uuid: 8.3.2
 
 devDependencies:
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
+  '@types/uuid': 8.3.4
   '@vitejs/plugin-react': 1.2.0
   typescript: 4.5.5
   vite: 2.8.0
@@ -378,6 +382,10 @@ packages:
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+
+  /@types/uuid/8.3.4:
+    resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
+    dev: true
 
   /@vitejs/plugin-react/1.2.0:
     resolution: {integrity: sha512-Rywwt0IXXg6yQ0hv3cMT3mtdDcGIw31mGaa+MMMAT651LhoXLF2yFy4LrakiTs7UKs7RPBo9eNgaS8pgl2A6Qw==}
@@ -942,6 +950,11 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
 
   /vite/2.8.0:
     resolution: {integrity: sha512-ed5rjyeysttuPJX/aKSA0gTB/8ZKLM5xF6FtEuKy1B9DiQbDNFMVMQxnb9JesgBPUMMIJxC8w5KZ/KNWLKFXoA==}
