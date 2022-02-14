@@ -3,9 +3,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addUser, IUser } from './userSlicer';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { auth, provider } from '../../firebase/auth';
+import { app } from '../../firebase/app';
+import { signInWithPopup, FacebookAuthProvider } from 'firebase/auth';
 
 export function User() {
-  const [data, setData] = useState<IUser>({ id: uuidv4(), name: '', age: 0 });
+  app;
+  const [data, setData] = useState<IUser>({
+    id: uuidv4(),
+    name: '',
+    age: 0,
+  });
   const users = useSelector((state: RootState) => state.users.value);
   const dispatch = useDispatch();
 
@@ -18,6 +26,27 @@ export function User() {
     });
     console.log(data);
     dispatch(addUser(data));
+
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // The signed-in user info.
+        const user = result.user;
+
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        const credential = FacebookAuthProvider.credentialFromResult(result);
+        const accessToken = credential?.accessToken;
+
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.email;
+        // The AuthCredential type that was used.
+        const credential = FacebookAuthProvider.credentialFromError(error);
+      });
   };
 
   return (
