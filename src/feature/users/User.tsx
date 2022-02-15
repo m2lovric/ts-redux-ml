@@ -4,7 +4,7 @@ import { addUser, IUser } from './userSlicer';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { auth, provider } from '../../firebase/app';
-import { signInWithRedirect, getRedirectResult } from 'firebase/auth';
+import { signInWithPopup } from 'firebase/auth';
 
 export function User() {
   const [data, setData] = useState<IUser>({
@@ -24,10 +24,10 @@ export function User() {
     });
     console.log(data);
     dispatch(addUser(data));
-    signInWithRedirect(auth, provider);
-    getRedirectResult(auth)
+    signInWithPopup(auth, provider)
       .then((result) => {
-        const user = result?.user;
+        // The signed-in user info.
+        const user = result.user;
         console.log(user);
       })
       .catch((error) => {});
