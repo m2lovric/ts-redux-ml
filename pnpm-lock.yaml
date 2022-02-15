@@ -6,7 +6,6 @@ specifiers:
   '@types/react-dom': ^17.0.10
   '@types/uuid': ^8.3.4
   '@vitejs/plugin-react': ^1.0.7
-  dotenv: ^16.0.0
   firebase: ^9.6.6
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -17,7 +16,6 @@ specifiers:
 
 dependencies:
   '@reduxjs/toolkit': 1.7.2_react-redux@7.2.6+react@17.0.2
-  dotenv: 16.0.0
   firebase: 9.6.6
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -1043,11 +1041,6 @@ packages:
     dependencies:
       ms: 2.1.2
     dev: true
-
-  /dotenv/16.0.0:
-    resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
-    engines: {node: '>=12'}
-    dev: false
 
   /electron-to-chromium/1.4.68:
     resolution: {integrity: sha512-cId+QwWrV8R1UawO6b9BR1hnkJ4EJPCPAr4h315vliHUtVUJDk39Sg1PMNnaWKfj5x+93ssjeJ9LKL6r8LaMiA==}
